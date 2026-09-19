@@ -188,9 +188,7 @@ function removeLastOccurrences(str, value) {
  */
 function sumOfCodes(str) {
   if (!str) return 0;
-  return str.split('').reduce((acc, char) => {
-    return acc + char.charCodeAt(0);
-  }, 0);
+  return str.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
 }
 
 /**
@@ -365,9 +363,7 @@ function findLongestWord(str) {
 function reverseWords(str) {
   return str
     .split(' ')
-    .map((word) => {
-      return word.split('').reverse().join('');
-    })
+    .map((word) => word.split('').reverse().join(''))
     .join(' ');
 }
 
